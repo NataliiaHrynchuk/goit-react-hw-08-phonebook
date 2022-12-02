@@ -1,5 +1,6 @@
 import { Helmet } from "react-helmet";
 import Typography from '@mui/material/Typography';
+import { LoginForm } from "components/LoginForm";
 
 export default function Login() {
     return (
@@ -7,7 +8,7 @@ export default function Login() {
             <Helmet>
                 <Typography variant="h3">Login</Typography>
             </Helmet>
-            <form></form>
+            <LoginForm></LoginForm>
         </div>
     );
 }
