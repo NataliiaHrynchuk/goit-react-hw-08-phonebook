@@ -1,7 +1,7 @@
 import { lazy } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import { CssBaseline } from '@mui/material';
-import  Header  from 'components/Header';
+import  Layout  from 'Layout';
 
 const Home = lazy(() => 
   import('pages/Home')
@@ -19,7 +19,7 @@ export const App = () => {
     <>
       <CssBaseline/>
       <Routes>
-        <Route path="/" element={<Header/>}>
+        <Route path="/" element={<Layout/>}>
           <Route index element={<Home/>}/>
           <Route path="/register" element={<Register/>}/>
           <Route path="/login" element={<Login/>}/>

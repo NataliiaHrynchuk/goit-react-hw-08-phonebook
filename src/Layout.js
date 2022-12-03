@@ -9,7 +9,7 @@ const theme = createTheme({
     },
 });
 
-export default function Header () {
+export default function Layout () {
     return (
         <>
             <AppBar position="static">
