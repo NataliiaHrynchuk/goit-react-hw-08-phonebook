@@ -7,7 +7,7 @@ export default function Contacts() {
             <Helmet>
                 <Typography variant="h3">Contacts</Typography>
             </Helmet>
-            <form></form>
+            
         </div>
     );
 }

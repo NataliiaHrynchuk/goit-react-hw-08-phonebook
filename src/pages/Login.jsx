@@ -11,4 +11,4 @@ export default function Login() {
             <LoginForm></LoginForm>
         </div>
     );
-}
+} 

@@ -3,13 +3,13 @@ import { Route, Routes } from 'react-router-dom';
 import { CssBaseline } from '@mui/material';
 import  Layout  from 'Layout';
 
-const Home = lazy(() => 
+const HomePage = lazy(() => 
   import('pages/Home')
 );
-const Register = lazy(() =>
+const RegisterPage = lazy(() =>
   import('pages/Register')
 );
-const Login = lazy(() =>
+const LoginPage = lazy(() =>
   import('pages/Login')
 );
 
@@ -20,9 +20,9 @@ export const App = () => {
       <CssBaseline/>
       <Routes>
         <Route path="/" element={<Layout/>}>
-          <Route index element={<Home/>}/>
-          <Route path="/register" element={<Register/>}/>
-          <Route path="/login" element={<Login/>}/>
+          <Route index element={<HomePage/>}/>
+          <Route path="/register" element={<RegisterPage/>}/>
+          <Route path="/login" element={<LoginPage/>}/>
         </Route>
       </Routes>   
     </>  
