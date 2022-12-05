@@ -1,14 +1,36 @@
+import { Link, createTheme, ThemeProvider } from "@mui/material";
 import { NavLink } from "react-router-dom";
+
+const theme = createTheme({
+    palette: {
+        secondary: {
+            main: '#fff',
+        },
+    },
+});
 
 export const AuthNav = () => {
     return (
-        <>
-            <NavLink to="/register">
+        < >
+            <ThemeProvider theme={theme}>
+                <Link
+                    component={NavLink}
+                    variant="h6"
+                    underline="none"
+                    color="secondary"
+                    sx={{ flexGrow: 0.05 }}
+                    to="/register">
                 Register
-            </NavLink>
-            <NavLink to="/login">
+                </Link>
+                <Link
+                    component={NavLink}
+                    variant="h6"
+                    underline="none"
+                    color="secondary"
+                    to="/login">
                 Log in
-            </NavLink>
+                </Link>
+            </ThemeProvider>    
         </>
     );
 };

@@ -1,3 +1,4 @@
+import { TextField } from "@mui/material";
 import { useDispatch } from "react-redux";
 import { logIn } from "redux/auth/authOperations";
 
@@ -20,11 +21,11 @@ export const LoginForm = () => {
         <form onSubmit={handleSubmit} autoComplete="off">
             <label>
                 Email
-                <input type="email" name="email" />
+                <TextField type="email" name="email" />
             </label>
             <label>
                 Password
-                <input type="password" name="password" />
+                <TextField type="password" name="password" />
             </label>
             <button type="submit">Log in</button>
         </form>

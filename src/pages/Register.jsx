@@ -1,6 +1,7 @@
 import { Helmet } from "react-helmet";
 import Typography from '@mui/material/Typography';
-import { RegisterForm} from "components/RegisterForm";
+import { RegisterForm } from "components/RegisterForm";
+
 export default function Register() {
     return (
         <div>
