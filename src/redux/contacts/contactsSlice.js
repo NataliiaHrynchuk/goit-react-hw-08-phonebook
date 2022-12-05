@@ -1,6 +1,9 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { contactsInitialState } from "redux/contacts/contactsConstants";
-import { fetchContacts, addContact, deleteContact, updateContact } from "redux/contacts/contactsOperations";
+import {
+    fetchContacts, addContact, deleteContact,
+    // updateContact
+} from "redux/contacts/contactsOperations";
 
 const handlePending = state => {
     state.isLoading = true;
@@ -36,7 +39,6 @@ const contactsSlice = createSlice({
             state.isLoading = false;
             state.error = null;
             state.items = state.items.filter(contact => contact.id !== action.payload.id);
-             
         }
     }
 });
