@@ -8,7 +8,7 @@ export default function Register() {
             <Helmet>
                 <Typography variant="h3">Registration</Typography>
             </Helmet>
-            <RegisterForm></RegisterForm>
+            <RegisterForm/>
         </div>
     );
 }
