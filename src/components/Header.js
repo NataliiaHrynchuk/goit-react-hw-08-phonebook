@@ -6,7 +6,7 @@ import { UserMenu } from "./UserMenu";
 
 export const Header = () => {
     const { isLoggedIn } = useAuth();
-    console.log(isLoggedIn);
+    console.log('isLoggedIn', {isLoggedIn});
     return (
         <AppBar position="static">
             <Toolbar component="nav">
