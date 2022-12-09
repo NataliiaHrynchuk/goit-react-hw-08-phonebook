@@ -20,7 +20,6 @@ export const Navigation = () => {
                 variant="h6"
                 underline="none"
                 color="secondary"
-                sx={{ flexGrow: 1 }}
                 to="/"
                 end>
                 Home
@@ -28,6 +27,7 @@ export const Navigation = () => {
             {isLoggedIn && (
                     <Link
                         component={NavLink}
+                        sx={{ml:3}}
                         variant="h6"
                         underline="none"
                         color="secondary"

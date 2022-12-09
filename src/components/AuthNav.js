@@ -1,4 +1,4 @@
-import { Link, createTheme, ThemeProvider } from "@mui/material";
+import { Grid, Link, createTheme, ThemeProvider } from "@mui/material";
 import { NavLink } from "react-router-dom";
 
 const theme = createTheme({
@@ -11,7 +11,7 @@ const theme = createTheme({
 
 export const AuthNav = () => {
     return (
-        < >
+        <Grid container justifyContent="flex-end" >
             <ThemeProvider theme={theme}>
                 <Link
                     component={NavLink}
@@ -31,6 +31,6 @@ export const AuthNav = () => {
                 Log in
                 </Link>
             </ThemeProvider>    
-        </>
+        </Grid>
     );
 };

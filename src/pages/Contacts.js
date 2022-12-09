@@ -1,11 +1,16 @@
 import { Helmet } from "react-helmet";
-import Typography from '@mui/material/Typography';
+import {Typography} from '@mui/material';
 
 export default function Contacts() {
     return (
         <div>
             <Helmet>
-                <Typography variant="h3">Contacts</Typography>
+                <Typography
+                marginTop="100px"                   
+                variant="h3"
+                    >
+                    Contacts
+                </Typography>
             </Helmet>
             
         </div>
