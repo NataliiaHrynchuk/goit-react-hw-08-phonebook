@@ -13,7 +13,7 @@ export const Navigation = () => {
     const { isLoggedIn } = useAuth();
 
     return (
-        <>
+        <nav>
             <ThemeProvider theme={theme}>
             <Link
                 component={NavLink}
@@ -36,6 +36,6 @@ export const Navigation = () => {
                 </Link>
                 )}
             </ThemeProvider>
-        </>
+        </nav>
     );
 };
