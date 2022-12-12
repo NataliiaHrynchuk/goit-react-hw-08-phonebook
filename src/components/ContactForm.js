@@ -1,6 +1,6 @@
 import React from "react";
 import { useState } from "react";
-
+import { Box, Button, FormControl, Paper, TextField, Typography } from "@mui/material";
 import { useDispatch } from "react-redux";
 import { addContact } from "redux/contacts/contactsOperations";
 import { useSelector } from "react-redux";
@@ -44,18 +44,27 @@ export default function ContactForm() {
         };
     }
 
-        return (
-            <form
-                // as="form"
-                border="0.5px solid rgb(112, 111, 111)"
-                display="inline-block"
-                w="200px"
-                pad="20px 250px 20px 20px"
+    return (
+        <Paper
+            sx={{
+                minWidth: 300,
+                minHeight: 300,
+                marginTop: 2,
+                p: 2,
+                display: 'flex',
+                flexDirection: 'column',
+                
+                alignItems: 'center',
+                backgroundColor: '#ebe6f3',
+            }}>
+            <Typography variant="h6" sx={{mb: 2}}>Enter new contact</Typography>
+            <FormControl
+                component="form"
                 onSubmit={handleSubmit}
             >
-                <label htmlFor="id-name">
-                    Name </label>
-                <p
+                <Typography component="label" htmlFor="id-name">
+                    Name </Typography>
+                <TextField
                     type="text"
                     name="name"
                     id="id-name"
@@ -65,12 +74,13 @@ export default function ContactForm() {
                     value={name}
                     mt="10px"
                     mb="10px"
+                    size="small"
                     onChange={handleChange}
                 />
                 
-                <label htmlFor="id-number">
-                    Number </label>
-                <p
+                <Typography component="label" htmlFor="id-number">
+                    Number </Typography>
+                <TextField
                     type="tel"
                     name="number"
                     id="id-numder"
@@ -81,9 +91,11 @@ export default function ContactForm() {
                     onChange={handleChange}
                     mt="10px"
                     mb="10px"
-                    mr="120px" />
+                    mr="120px"
+                    size="small"/>
                 
-                <button type="submit">Add contact</button>
-            </form>
+                <Button type="submit">Add contact</Button>
+            </FormControl>
+            </Paper>
         )
     };

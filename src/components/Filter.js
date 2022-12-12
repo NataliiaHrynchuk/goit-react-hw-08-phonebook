@@ -1,7 +1,7 @@
 import { selectFilter } from 'redux/filter/filterSelectors';
 import { useDispatch, useSelector } from 'react-redux';
 import { setFilter } from 'redux/filter/filterSlice';
-
+import { Box, TextField } from '@mui/material';
 export const Filter = () => {
     const dispatch = useDispatch();
     const filter = useSelector(selectFilter);
@@ -10,22 +10,23 @@ export const Filter = () => {
     };
     
     return (
-        <div
-            display="flex"
-            flexWrap="wrap"
-            w="300px"
-            gap="10px"
+        <Box
+            sx={{
+                display: "flex",
+            flexDirection: 'column',
+            width: "300px",
+            alignItems: 'center',}}
         >
             <label htmlFor="id-filter">
                 Find contacts by name
             </label>
-            <p
+            <TextField
                 type="text"
                 name="filter"
                 id="id-filter"
                 value={filter}
                 onChange={changeFilter}
-            ></p>
-        </div>
+            ></TextField>
+        </Box>
     )
 };

@@ -18,7 +18,13 @@ export default function Contacts() {
     }, [dispatch]);
 
     return (
-        <Box padding={4}>
+        <Box
+            padding={4}
+            sx={{
+            display: 'flex',
+                flexDirection: 'column',
+                alignItems: 'center',
+        }}>
             <Helmet>
                 <Typography
                 marginTop="100px"                   
