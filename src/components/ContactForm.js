@@ -1,6 +1,6 @@
 import React from "react";
 import { useState } from "react";
-import { Box, Button, FormControl, Paper, TextField, Typography } from "@mui/material";
+import { Button, FormControl, Grid, Paper, TextField, Typography } from "@mui/material";
 import { useDispatch } from "react-redux";
 import { addContact } from "redux/contacts/contactsOperations";
 import { useSelector } from "react-redux";
@@ -47,13 +47,13 @@ export default function ContactForm() {
     return (
         <Paper
             sx={{
-                minWidth: 300,
-                minHeight: 300,
-                marginTop: 2,
+                minWidth: 400,
+                minHeight: 200,
+                margin: "auto",
                 p: 2,
                 display: 'flex',
                 flexDirection: 'column',
-                
+                justifyContent: 'center',
                 alignItems: 'center',
                 backgroundColor: '#ebe6f3',
             }}>
@@ -62,6 +62,13 @@ export default function ContactForm() {
                 component="form"
                 onSubmit={handleSubmit}
             >
+                <Grid
+                    container
+                    direction="column"
+                    gap={1}
+                    justifyContent="center"
+                    alignItems="center"
+                >
                 <Typography component="label" htmlFor="id-name">
                     Name </Typography>
                 <TextField
@@ -72,9 +79,8 @@ export default function ContactForm() {
                     title="Name may contain only letters, apostrophe, dash and spaces. For example Adrian, Jacob Mercer, Charles de Batz de Castelmore d'Artagnan"
                     required
                     value={name}
-                    mt="10px"
-                    mb="10px"
                     size="small"
+                    sx={{backgroundColor: "#fff"}}
                     onChange={handleChange}
                 />
                 
@@ -89,13 +95,14 @@ export default function ContactForm() {
                     required
                     value={number}
                     onChange={handleChange}
-                    mt="10px"
-                    mb="10px"
-                    mr="120px"
-                    size="small"/>
+                    size="small"
+                    sx={{backgroundColor: "#fff"}}
+                />
                 
                 <Button type="submit">Add contact</Button>
+            </Grid>
             </FormControl>
+            
             </Paper>
         )
     };

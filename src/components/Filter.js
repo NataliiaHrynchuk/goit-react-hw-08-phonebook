@@ -24,6 +24,7 @@ export const Filter = () => {
                 type="text"
                 name="filter"
                 id="id-filter"
+                size="small"
                 value={filter}
                 onChange={changeFilter}
             ></TextField>

@@ -11,27 +11,36 @@ export const ContactList = () => {
             
     return (
             
-        <ul
-            // as="ul"
-            pad="0">
+        <Grid
+            component="ul"
+            container
+            display="flex"
+            gap="10px"
+        >
             {contacts.map(({ id, name, number }) => (
-                <Grid container spasing={3}
+                    <Grid container spasing={3}
                     key={id}
                     as="li"
                     display="flex"
-                    gap="10px"
-                    alIt="center"
+                    gap="20px"
+                    alignItems="center"
                 >
-                    <Typography variant='body1'>{name}:</Typography>
-                    <Typography variant='body2'>{number}</Typography>
+                    <Grid item xs >
+                        <Typography variant='body1'>{name}:</Typography>
+                    </Grid>
+                    <Grid item xs>
+                        <Typography variant='body2'>{number}</Typography>
+                    </Grid>
+                    <Grid item xs>
                     <Button
                         type="button"
                         w="60px"
                         onClick={() => dispatch(deleteContact(id))}
                     >Delete
-                    </Button>
+                        </Button>
+                    </Grid>
                 </Grid>
             ))}
-        </ul>
+        </Grid>
     )
 };

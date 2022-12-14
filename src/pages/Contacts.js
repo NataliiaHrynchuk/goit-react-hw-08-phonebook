@@ -21,7 +21,7 @@ export default function Contacts() {
         <Box
             padding={4}
             sx={{
-            display: 'flex',
+                display: 'flex',
                 flexDirection: 'column',
                 alignItems: 'center',
         }}>
@@ -45,9 +45,6 @@ export default function Contacts() {
                         <ContactList />
                     </>
                 )}
- 
-            
-            
         </Box>
     );
 }
