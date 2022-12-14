@@ -1,4 +1,4 @@
-import { Avatar, Box, Button, Container, FormControl, Grid, TextField, Typography} from "@mui/material";
+import { Avatar, Box, Button, Container, FormControl, Grid, TextField, Typography } from "@mui/material";
 import { Lock } from "@mui/icons-material";
 import { useDispatch } from "react-redux";
 import { register } from "redux/auth/authOperations";

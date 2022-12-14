@@ -1,6 +1,8 @@
 import { NavLink } from "react-router-dom";
-import { Link, createTheme, ThemeProvider} from "@mui/material";
+import { createTheme, ThemeProvider} from "@mui/material";
+import { StyledLink } from "components/StyledLink";
 import { useAuth } from "hooks/useAuth";
+
 
 const theme = createTheme({
     palette: {
@@ -9,31 +11,34 @@ const theme = createTheme({
         },
     },
 });
+
 export const Navigation = () => {
     const { isLoggedIn } = useAuth();
 
     return (
         <nav>
             <ThemeProvider theme={theme}>
-            <Link
+            <StyledLink
                 component={NavLink}
                 variant="h6"
                 underline="none"
                 color="secondary"
                 to="/"
-                end>
+                end
+                >
                 Home
-            </Link>
+            </StyledLink>
             {isLoggedIn && (
-                    <Link
+                    <StyledLink
                         component={NavLink}
                         sx={{ml:3}}
                         variant="h6"
                         underline="none"
                         color="secondary"
-                        to="/contacts">
+                        to="/contacts"
+                    >
                     Contacts
-                </Link>
+                </StyledLink>
                 )}
             </ThemeProvider>
         </nav>

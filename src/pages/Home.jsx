@@ -7,11 +7,25 @@ export default function Home() {
             container
             >
             <Typography
-                variant="h1"
+                variant="h3"
                 marginTop="50px"
                 align='center'
-            >
-                Welcome to Phonebook
+            > 
+                Welcome to Phonebook!
+            </Typography>
+            <Typography
+                variant="h5"
+                marginTop="50px"
+                align='center'
+            > 
+            If you are not logged in, log in.
+            </Typography>
+            <Typography
+                variant="h5"
+                marginTop="50px"
+                align='center'
+            > 
+            If you are not registered, register and log in.
             </Typography>
         </Box>
     )

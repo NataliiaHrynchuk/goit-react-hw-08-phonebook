@@ -3,7 +3,7 @@ import { useSelector } from 'react-redux';
 import { selectVisibleContacts } from 'redux/contacts/contactSelectors';
 import { useDispatch } from 'react-redux';
 import { deleteContact } from 'redux/contacts/contactsOperations';
-import { Button, Grid, Paper, Typography } from '@mui/material';
+import { Button, Grid, Typography } from '@mui/material';
 
 export const ContactList = () => {
     const dispatch = useDispatch();
@@ -20,8 +20,7 @@ export const ContactList = () => {
             gap="10px"
         >
             {contacts.map(({ id, name, number }) => (
-                
-                    <Grid container spasing={3}
+                <Grid container spasing={3}
                     key={id}
                     as="li"
                     display="flex"
@@ -37,24 +36,22 @@ export const ContactList = () => {
                 >
                     <Grid item xs={3} >
                         <Typography variant='body1'>{name}:</Typography>
-                        </Grid>
-                        <Grid item xs={3}>
-                            <Typography variant='body2'>{number}</Typography>
-                        </Grid>
-                        <Grid item xs={2}>
-                            <Button
-                                variant="contained"
-                                size="small"
-                                type="button"
-                                w="60px"
-                                onClick={() => dispatch(deleteContact(id))}
+                    </Grid>
+                    <Grid item xs={3}>
+                        <Typography variant='body2'>{number}</Typography>
+                    </Grid>
+                    <Grid item xs={2}>
+                        <Button
+                            variant="contained"
+                            size="small"
+                            type="button"
+                            w="60px"
+                            onClick={() => dispatch(deleteContact(id))}
                             >
                             Delete
                         </Button>
-                        
-                        </Grid>
                     </Grid>
-                    
+                </Grid>
             ))}
         </Grid>
     )

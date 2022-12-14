@@ -13,11 +13,11 @@ const LogOutButton = styled(Button)({
     backgroundColor: '#ffffff',
     borderColor: '#ffffff',
     '&:hover': {
-        backgroundColor: '#a19ba8',
+        backgroundColor: '#ad1457',
         borderColor: '#a19ba8',
         color: '#ffffff',
     }
-})
+});
 
 export const UserMenu = () => {
     const dispatch = useDispatch();

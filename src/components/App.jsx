@@ -2,11 +2,11 @@ import { lazy, useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import { Route, Routes } from 'react-router-dom';
 import { CssBaseline, createTheme, ThemeProvider } from '@mui/material';
-import { PrivateRoute } from 'PrivateRoute';
-import { RestrictedRoute } from 'RestrictedRoute';
+import { PrivateRoute } from 'components/PrivateRoute';
+import { RestrictedRoute } from 'components/RestrictedRoute';
 import { refreshUser } from 'redux/auth/authOperations';
 import { useAuth } from 'hooks/useAuth';
-import Layout from 'Layout';
+import Layout from 'components/Layout';
 
 const theme = createTheme();
 

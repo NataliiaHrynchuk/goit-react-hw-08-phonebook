@@ -20,7 +20,7 @@ export const Filter = () => {
             }}
         >
             <label htmlFor="id-filter">
-                Find contacts by name
+                Find contact by name
             </label>
             <TextField
                 type="text"

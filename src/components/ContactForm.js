@@ -57,7 +57,7 @@ export default function ContactForm() {
                 alignItems: 'center',
                 backgroundColor: '#ebe6f3',
             }}>
-            <Typography variant="h6" sx={{mb: 2}}>Enter new contact</Typography>
+            <Typography variant="h6" sx={{mb: 2}}>Enter a new contact</Typography>
             <FormControl
                 component="form"
                 onSubmit={handleSubmit}

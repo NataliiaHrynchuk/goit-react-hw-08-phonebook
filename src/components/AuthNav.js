@@ -1,5 +1,6 @@
-import { Grid, Link, createTheme, ThemeProvider } from "@mui/material";
+import { Grid, createTheme, ThemeProvider } from "@mui/material";
 import { NavLink } from "react-router-dom";
+import { StyledLink } from "components/StyledLink";
 
 const theme = createTheme({
     palette: {
@@ -13,7 +14,7 @@ export const AuthNav = () => {
     return (
         <Grid container justifyContent="flex-end" >
             <ThemeProvider theme={theme}>
-                <Link
+                <StyledLink
                     component={NavLink}
                     variant="h6"
                     underline="none"
@@ -21,15 +22,15 @@ export const AuthNav = () => {
                     sx={{ flexGrow: 0.05 }}
                     to="/register">
                 Register
-                </Link>
-                <Link
+                </StyledLink>
+                <StyledLink
                     component={NavLink}
                     variant="h6"
                     underline="none"
                     color="secondary"
                     to="/login">
                 Log in
-                </Link>
+                </StyledLink>
             </ThemeProvider>    
         </Grid>
     );
