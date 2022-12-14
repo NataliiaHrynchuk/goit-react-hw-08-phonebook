@@ -13,9 +13,11 @@ export const Filter = () => {
         <Box
             sx={{
                 display: "flex",
-            flexDirection: 'column',
-            width: "300px",
-            alignItems: 'center',}}
+                flexDirection: 'column',
+                width: "300px",
+                alignItems: 'center',
+                gap: '10px',
+            }}
         >
             <label htmlFor="id-filter">
                 Find contacts by name

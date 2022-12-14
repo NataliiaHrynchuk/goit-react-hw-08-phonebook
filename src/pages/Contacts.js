@@ -24,6 +24,7 @@ export default function Contacts() {
                 display: 'flex',
                 flexDirection: 'column',
                 alignItems: 'center',
+                gap: '20px'
         }}>
             <Helmet>
                 <Typography
@@ -36,7 +37,10 @@ export default function Contacts() {
 
                 <ContactForm />
                 <div>{isLoading && 'Request in progress'}</div>
-                <Typography variant="h2">
+            <Typography
+                component="h2"
+                variant="h3"
+                marginTop="-10px">
                     Contacts
                 </Typography>
                 {contacts.length > 0 && (
