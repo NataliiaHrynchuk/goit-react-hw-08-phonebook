@@ -19,7 +19,6 @@ export default function Contacts() {
 
     return (
         <Box
-            padding={4}
             sx={{
                 display: 'flex',
                 flexDirection: 'column',
@@ -35,14 +34,15 @@ export default function Contacts() {
                 </Typography>
             </Helmet>
 
-                <ContactForm />
-                <div>{isLoading && 'Request in progress'}</div>
+            <ContactForm />
+            <div>{isLoading && 'Request in progress'}</div>
             <Typography
                 component="h2"
                 variant="h3"
-                marginTop="-10px">
-                    Contacts
-                </Typography>
+                marginTop="-10px"
+            >
+                Contacts
+            </Typography>
                 {contacts.length > 0 && (
                     <>
                         <Filter />
